@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <title>Jogo da Forca</title>
+</head>
+<body>
+    <header></header>
+    <main class="game">
+        <form action="" class="game-form" id="gameForm">
+            <h2 class="game-form-title">Selecione a categoria e a dificuldade:</h2>
+            <div class="game-form-category">
+                <fieldset class="game-form-category-item">
+                    <label for="clubesDeFutebol">Clubes de Futebol</label>
+                    <input type="radio" name="game-category" id="clubesDeFutebol">
+                </fieldset>
+                <fieldset class="game-form-category-item">
+                    <label for="jogadoresAtuais">Jogadores Atuais</label>
+                    <input type="radio" name="game-category" id="jogadoresAtuais">
+                </fieldset>
+                <fieldset class="game-form-category-item">
+                    <label for="jogadoresAposentados">Jogadores Aposentados</label>
+                    <input type="radio" name="game-category" id="jogadoresAposentados">
+                </fieldset>
+                <fieldset class="game-form-category-item">
+                    <label for="selecoes">Seleções</label>
+                    <input type="radio" name="game-category" id="selecoes">
+                </fieldset>
+                <fieldset class="game-form-category-item">
+                    <label for="tecnicos">Técnicos</label>
+                    <input type="radio" name="game-category" id="tecnicos">
+                </fieldset>
+                <fieldset class="game-form-category-item">
+                    <label for="estadios">Estádios</label>
+                    <input type="radio" name="game-category" id="estadios">
+                </fieldset>
+            </div>
+            <div class="game-form-difficulty">
+                <fieldset class="game-form-difficulty-item">
+                    <label for="facil">Fácil</label>
+                    <input type="radio" name="game-difficulty" id="facil">
+                </fieldset>
+                <fieldset class="game-form-difficulty-item">
+                    <label for="medio">Médio</label>
+                    <input type="radio" name="game-difficulty" id="medio">
+                </fieldset>
+                <fieldset class="game-form-difficulty-item">
+                    <label for="dificil">Difícil</label>
+                    <input type="radio" name="game-difficulty" id="dificil">
+                </fieldset>
+            </div>
+            <button type="submit" class="game-form-button">Start</button>
+        </form>
+    </main>
+    <footer></footer>
+
+    <script type="module" src="./scripts/gameForm.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+@import '../abstract/_variaveis'
+.game-form
+    max-width: 95%
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    background-color: $pink
+    color: $branco
+    padding: .5em
+    .game-form-title
+        font-size: 1.6em
+        margin-bottom: 1em
+    .game-form-category
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: .5em
+        .game-form-category-item
+            border: none
+            display: flex
+            flex-direction: column
+            row-gap: .4em
+            background-color: $amarelo
+            max-width: 90px
+            padding: .2em 0
+            border-radius: 4px
+            label
+                text-align: center
+                font-size: .85em
+                color: $preto
+            input
+                appearance: none
+                width: 50px
+                height: 30px
+                border: solid 1px $preto
+                align-self: center
+                border-radius: 6px
+                background-color: $pink
+                cursor: pointer
+                &:checked
+                    background-color: red
+    .game-form-difficulty
+        width: 100%
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        margin: 1em 0
+        gap: .5em
+        .game-form-difficulty-item
+            display: flex
+            flex-direction: column
+            border: none
+            justify-content: center
+            align-items: center
+            row-gap: .3em
+            background-color: $amarelo
+            border-radius: 6px
+            padding: .3em 0
+            label
+                text-align: center
+                font-size: .85em
+                color: $preto
+            input
+                appearance: none
+                width: 40px
+                height: 20px
+                border: solid 1px $preto
+                align-self: center
+                border-radius: 6px
+                background-color: $pink
+                cursor: pointer
+                &:checked
+                    background-color: red
+    .game-form-button
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: .2em
+        font-size: 1.5em
+        background-color: $amarelo
+        border-radius: 4px
+        color: $branco
+        text-shadow: 1px 1px 2px $preto

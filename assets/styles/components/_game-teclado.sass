@@ -1,0 +1,16 @@
+@import '../abstract/_variaveis'
+.game-teclado
+    display: grid
+    grid-template-columns: repeat(7, 1fr)
+    max-width: 95%
+    margin: 0 auto
+    gap: .2em
+    background-color: $pink
+    padding: .5em
+    .game-teclado-btn
+        width: 100%
+        height: 35px
+        &:disabled
+            background-color: red
+            opacity: .5
+            color: $branco
