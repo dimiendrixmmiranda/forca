@@ -1,7 +1,10 @@
+import { gerarElemento } from "./criacao/gerarElemento.js"
 import { gerarForcaImagem } from "./criacao/gerarForcaImagem.js"
 import { gerarLetras } from "./criacao/gerarForcaLetras.js"
 import { gerarTeclado } from "./criacao/gerarTeclado.js"
 import { informacoes } from "./dados/informacoes.js"
+import { inserirLetraNoContainer } from "./inserirLetraNoContainer.js"
+import { vereficarSeOJogoAcabou } from "./verificarSeOJogoAcabou.js"
 const elementoGame = document.querySelector('.game')
 const arrayDeInformacoes = informacoes
 
@@ -13,6 +16,12 @@ export function gerarJogo(dadosSelecionados){
     elementoGame.appendChild(elementoGameLetras)
     const elementoTeclado = gerarTeclado(palavraSorteada)
     elementoGame.appendChild(elementoTeclado)
+    const balaoCategoria = gerarBalaoCategoria(dadosSelecionados)
+    elementoGame.appendChild(balaoCategoria)
+    const arrayElementoLetrasPalavraSorteada = elementoGameLetras.querySelectorAll('.letra')
+    const imagemForca = elementoForcaImagem.querySelector('img')
+    const listaBtnsTeclado = elementoTeclado.querySelectorAll('.game-teclado-btn')
+    inserirLetraNoContainer(palavraSorteada, arrayElementoLetrasPalavraSorteada, imagemForca, listaBtnsTeclado)
 }
 
 function selecionarPalavra(dadosSelecionados){
@@ -20,4 +29,9 @@ function selecionarPalavra(dadosSelecionados){
     const selecionarPalavrasPeloNivel = categoriaSelecionada.arrayDeInformacoes.filter(possivelPalavra => possivelPalavra.dificuldade == dadosSelecionados.dificuldadeSelecionada)
     const indiceDaPalavraSelecionada = Math.floor(Math.random() * selecionarPalavrasPeloNivel.length) 
     return selecionarPalavrasPeloNivel[indiceDaPalavraSelecionada]
+}
+
+function gerarBalaoCategoria(dadosSelecionados){
+    const containerBalaoCategoria = gerarElemento('div', 'game-balao-categoria', '', `Categoria: <strong>${dadosSelecionados.categoriaSelecionada.split('-').join(' ')}</strong>`)
+    return containerBalaoCategoria
 }

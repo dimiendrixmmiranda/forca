@@ -3,15 +3,28 @@
     position: absolute
     top: 50%
     left: 50%
-    transform: translate(-50%, -50%)
-    background-color: $pink
-    white-space: nowrap
+    transform: translate(-50%, -60%)
+    background-color: $amarelo
+    box-shadow: 0 0 3px 2px $preto
+    white-space: wrap
     padding: .8em
     display: flex
     flex-direction: column
     row-gap: .5em
     border-radius: 4px
+    width: 85%
     .game-perdedor-p
         font-size: 2em
+        text-align: center
+        line-height: 1
+        display: flex
+        flex-direction: column
+        row-gap: .4em
+        strong
+            color: $creme
+            text-shadow: 1px 1px 2px $preto
     .game-perdedor-btn
         font-size: 1.4em
+        padding: .2em 0
+        background-color: $creme
+        border-radius: 4px

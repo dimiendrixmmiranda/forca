@@ -8,15 +8,15 @@ import { tecnicos } from "./tecnicos.js";
 export const informacoes = []
 
 informacoes.push({
-    categoria: 'clubesDeFutebol', 
+    categoria: 'clubes-de-futebol', 
     arrayDeInformacoes: clubesDeFutebol
 })
 informacoes.push({
-    categoria: 'jogadoresAtuais', 
+    categoria: 'jogadores-atuais', 
     arrayDeInformacoes: jogadoresAtuais
 })
 informacoes.push({
-    categoria: 'jogadoresAposentados', 
+    categoria: 'jogadores-aposentados', 
     arrayDeInformacoes: jogadoresAposentados
 })
 informacoes.push({

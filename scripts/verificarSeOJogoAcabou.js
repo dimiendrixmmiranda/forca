@@ -1,6 +1,9 @@
-import { gerarElemento } from "./criacao/gerarElemento.js"
+import { gerarContainerPerdedor } from "./criacao/gerarContainerPerdedor.js"
+import { gerarContainerVencedor } from "./criacao/gerarContainerVencedor.js"
 
-export function vereficarSeOJogoAcabou(contadorDeErros) {
+const containerGame = document.querySelector('.game')
+
+export function vereficarSeOJogoAcabou(contadorDeErros, palavraSorteada) {
     const arrayContainerDasLetras = document.querySelectorAll('.game-letras-container')
     const caracteres = arrayContainerDasLetras.length
     const arrayAuxiliar = []
@@ -13,26 +16,16 @@ export function vereficarSeOJogoAcabou(contadorDeErros) {
 
     if (arrayAuxiliar.length >= caracteres){
         console.log('voce venceu / marcar palavra como lida')
+        const containerVencedor = gerarContainerVencedor(palavraSorteada)
+        containerGame.appendChild(containerVencedor)
         // tem que marcar a palavra como lida/ ja concluida
     }
 
     if(contadorDeErros >= 6){
-        const containerPerdedor = gerarContainerPerdedor()
+        const containerPerdedor = gerarContainerPerdedor(palavraSorteada)
         elementoGame.appendChild(containerPerdedor)
     }
 }
 
 const elementoGame = document.querySelector('.game')
 
-function gerarContainerPerdedor(){
-    const div = gerarElemento('div', 'game-perdedor')
-    const p = gerarElemento('p', 'game-perdedor-p', '', 'Você perdeu!')
-    const btnJogarNovamente = gerarElemento('button', 'game-perdedor-btn', 'gamePerdedorBtn', 'Jogar Novamente')
-    btnJogarNovamente.addEventListener('click', (e) => {
-        e.preventDefault()
-        window.location.reload(true)
-    })
-    div.appendChild(p)
-    div.appendChild(btnJogarNovamente)
-    return div
-}

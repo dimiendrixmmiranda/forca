@@ -4,25 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Jogo da Forca</title>
 </head>
 <body>
-    <header></header>
+    <header class="header">
+        <a href="#">
+            <img src="./assets/imgs/forca-0.png" alt="">
+            <h1>Forca</h1>
+        </a>
+        <button class="header-bars">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </header>
+
     <main class="game">
         <form action="" class="game-form" id="gameForm">
-            <h2 class="game-form-title">Selecione a categoria e a dificuldade:</h2>
+            <h2 class="game-form-title">Selecione a categoria:</h2>
             <div class="game-form-category">
                 <fieldset class="game-form-category-item">
                     <label for="clubesDeFutebol">Clubes de Futebol</label>
-                    <input type="radio" name="game-category" id="clubesDeFutebol">
+                    <input type="radio" name="game-category" id="clubes-de-futebol">
                 </fieldset>
                 <fieldset class="game-form-category-item">
                     <label for="jogadoresAtuais">Jogadores Atuais</label>
-                    <input type="radio" name="game-category" id="jogadoresAtuais">
+                    <input type="radio" name="game-category" id="jogadores-atuais">
                 </fieldset>
                 <fieldset class="game-form-category-item">
                     <label for="jogadoresAposentados">Jogadores Aposentados</label>
-                    <input type="radio" name="game-category" id="jogadoresAposentados">
+                    <input type="radio" name="game-category" id="jogadores-aposentados">
                 </fieldset>
                 <fieldset class="game-form-category-item">
                     <label for="selecoes">Seleções</label>
@@ -37,6 +47,7 @@
                     <input type="radio" name="game-category" id="estadios">
                 </fieldset>
             </div>
+            <h2 class="game-form-title">Escolha a dificuldade:</h2>
             <div class="game-form-difficulty">
                 <fieldset class="game-form-difficulty-item">
                     <label for="facil">Fácil</label>
@@ -54,7 +65,9 @@
             <button type="submit" class="game-form-button">Start</button>
         </form>
     </main>
-    <footer></footer>
+    <footer class="footer">
+        <p>Projeto desenvolvido e idealizado por <strong>Dimi Endrix Martins Miranda</strong>, utilizando HTML, CSS(SASS) e JavaScript com foco em manipulação de dados.</p>
+    </footer>
 
     <script type="module" src="./scripts/gameForm.js"></script>
 </body>

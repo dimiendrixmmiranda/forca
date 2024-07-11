@@ -1,32 +1,41 @@
 @import '../abstract/_variaveis'
 .game-form
     max-width: 95%
-    margin: 0 auto
+    height: fit-content
     display: flex
     flex-direction: column
-    background-color: $pink
+    background-color: $verde-2
     color: $branco
-    padding: .5em
+    padding: 1em
+    border-radius: 6px
+    box-shadow: 1px 1px 2px $preto
+    margin: 1.5em auto 1em auto
     .game-form-title
         font-size: 1.6em
-        margin-bottom: 1em
+        text-shadow: 1px 1px 2px $preto
+        margin-bottom: .4em
     .game-form-category
         display: grid
         grid-template-columns: repeat(3, 1fr)
         gap: .5em
+        color: $branco
+        margin-bottom: 1.5em
+        // text-shadow: 1px 1px 2px $preto
         .game-form-category-item
             border: none
             display: flex
             flex-direction: column
             row-gap: .4em
-            background-color: $amarelo
-            max-width: 90px
+            background-color: $verde-4
             padding: .2em 0
             border-radius: 4px
+            box-shadow: 0 0 2px 1px $preto
+            justify-self: center
+            width: 85px
+            height: 70px
             label
                 text-align: center
                 font-size: .85em
-                color: $preto
             input
                 appearance: none
                 width: 50px
@@ -34,16 +43,26 @@
                 border: solid 1px $preto
                 align-self: center
                 border-radius: 6px
-                background-color: $pink
+                background-color: $creme
                 cursor: pointer
+                position: relative
                 &:checked
-                    background-color: red
+                    background-color: $amarelo
+                &:checked
+                    &::before
+                        content: '✔'
+                        color: $branco
+                        text-shadow: 1px 1px 2px $preto
+                        position: absolute
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50%, -50%)
     .game-form-difficulty
         width: 100%
         display: grid
         grid-template-columns: repeat(3, 1fr)
-        margin: 1em 0
         gap: .5em
+        margin-bottom: 1.5em
         .game-form-difficulty-item
             display: flex
             flex-direction: column
@@ -51,13 +70,15 @@
             justify-content: center
             align-items: center
             row-gap: .3em
-            background-color: $amarelo
+            background-color: $verde-4
             border-radius: 6px
             padding: .3em 0
             label
                 text-align: center
                 font-size: .85em
-                color: $preto
+                color: $branco
+                font-weight: bold
+                text-transform: uppercase
             input
                 appearance: none
                 width: 40px
@@ -65,17 +86,27 @@
                 border: solid 1px $preto
                 align-self: center
                 border-radius: 6px
-                background-color: $pink
+                background-color: $creme
                 cursor: pointer
+                position: relative
                 &:checked
-                    background-color: red
+                    background-color: $amarelo
+                &:checked
+                    &::before
+                        content: '✔'
+                        color: $branco
+                        text-shadow: 1px 1px 2px $preto
+                        position: absolute
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50%, -50%)
     .game-form-button
         display: flex
         justify-content: center
         align-items: center
         padding: .2em
         font-size: 1.5em
-        background-color: $amarelo
+        background-color: $verde-4
         border-radius: 4px
         color: $branco
         text-shadow: 1px 1px 2px $preto
