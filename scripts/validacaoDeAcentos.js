@@ -3,22 +3,22 @@ export function substituirAcentoDaPalavra(palavra) {
         const novaPalavra = palavra.replace('á', 'a')
         return novaPalavra
     } else if (palavra.includes("é")) {
-        const novaPalavra = palavra.replace('é', 'a')
+        const novaPalavra = palavra.replace('é', 'e')
         return novaPalavra
     } else if (palavra.includes("í")) {
-        const novaPalavra = palavra.replace('í', 'a')
+        const novaPalavra = palavra.replace('í', 'i')
         return novaPalavra
     } else if (palavra.includes("ó")) {
-        const novaPalavra = palavra.replace('ó', 'a')
+        const novaPalavra = palavra.replace('ó', 'o')
         return novaPalavra
     } else if (palavra.includes("ú")) {
-        const novaPalavra = palavra.replace('ú', 'a')
+        const novaPalavra = palavra.replace('ú', 'u')
         return novaPalavra
     } else if (palavra.includes("ã")) {
         const novaPalavra = palavra.replace('ã', 'a')
         return novaPalavra
     } else if (palavra.includes("õ")) {
-        const novaPalavra = palavra.replace('õ', 'a')
+        const novaPalavra = palavra.replace('õ', 'o')
         return novaPalavra
     } else {
         return palavra
