@@ -4,12 +4,11 @@ import { gerarLetras } from "./criacao/gerarForcaLetras.js"
 import { gerarTeclado } from "./criacao/gerarTeclado.js"
 import { informacoes } from "./dados/informacoes.js"
 import { inserirLetraNoContainer } from "./inserirLetraNoContainer.js"
-import { vereficarSeOJogoAcabou } from "./verificarSeOJogoAcabou.js"
 const elementoGame = document.querySelector('.game')
 const arrayDeInformacoes = informacoes
 
 export function gerarJogo(dadosSelecionados){
-    const palavraSorteada = selecionarPalavra(dadosSelecionados).nome    
+    const palavraSorteada = selecionarPalavra(dadosSelecionados).nome
     const elementoForcaImagem = gerarForcaImagem()
     elementoGame.appendChild(elementoForcaImagem)
     const elementoGameLetras = gerarLetras(palavraSorteada)
@@ -21,7 +20,7 @@ export function gerarJogo(dadosSelecionados){
     const arrayElementoLetrasPalavraSorteada = elementoGameLetras.querySelectorAll('.letra')
     const imagemForca = elementoForcaImagem.querySelector('img')
     const listaBtnsTeclado = elementoTeclado.querySelectorAll('.game-teclado-btn')
-    inserirLetraNoContainer(palavraSorteada, arrayElementoLetrasPalavraSorteada, imagemForca, listaBtnsTeclado)
+    inserirLetraNoContainer(palavraSorteada, arrayElementoLetrasPalavraSorteada, imagemForca, listaBtnsTeclado, dadosSelecionados)
 }
 
 function selecionarPalavra(dadosSelecionados){

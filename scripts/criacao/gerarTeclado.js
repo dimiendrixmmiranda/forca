@@ -1,5 +1,3 @@
-import { inserirLetraNoContainer } from "../inserirLetraNoContainer.js"
-import { vereficarSeOJogoAcabou } from "../verificarSeOJogoAcabou.js"
 import { gerarElemento } from "./gerarElemento.js"
 
 export function gerarTeclado() {

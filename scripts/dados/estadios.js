@@ -1,32 +1,34 @@
+import { adicionarElementoALista } from "./adicionarElementoALista.js"
+
 export const estadios = []
 
-adicionarEstadio('Maracanã', 'facil', false)
-adicionarEstadio('Camp Nou', 'facil', false)
-adicionarEstadio('Santiago Bernabéu', 'facil', false)
-adicionarEstadio('Old Trafford', 'facil', false)
-adicionarEstadio('Anfield', 'facil', false)
-adicionarEstadio('San Siro', 'facil', false)
-adicionarEstadio('Allianz Arena', 'facil', false)
-adicionarEstadio('Parc des Princes', 'facil', false)
-adicionarEstadio('Estádio da Luz', 'facil', false)
-adicionarEstadio('Stamford Bridge', 'facil', false)
-adicionarEstadio('Signal Iduna Park', 'medio', false)
-adicionarEstadio('Wembley Stadium', 'medio', false)
-adicionarEstadio('Estádio do Dragão', 'medio', false)
-adicionarEstadio('Emirates Stadium', 'medio', false)
-adicionarEstadio('Estádio Olímpico de Roma', 'medio', false)
-adicionarEstadio('Estádio José Alvalade', 'medio', false)
-adicionarEstadio('Estádio Monumental de Núñez', 'medio', false)
-adicionarEstadio('Estádio Nacional de Brasília', 'medio', false)
-adicionarEstadio('Estádio Azteca', 'medio', false)
-adicionarEstadio('Estádio de São Petersburgo', 'medio', false)
-
-function adicionarEstadio(nome, dificuldade, jaFoiAcertado = false){
-    const objeto = {
-        nome: nome,
-        dificuldade: dificuldade,
-        jaFoiAcertado: jaFoiAcertado
-    }
-    estadios.push(objeto)
-}
-
+adicionarElementoALista(estadios, 'Maracanã', 'facil')
+adicionarElementoALista(estadios, 'Camp Nou', 'facil')
+adicionarElementoALista(estadios, 'Santiago Bernabéu', 'facil')
+adicionarElementoALista(estadios, 'Old Trafford', 'facil')
+adicionarElementoALista(estadios, 'Allianz Arena', 'facil')
+adicionarElementoALista(estadios, 'Anfield', 'facil')
+adicionarElementoALista(estadios, 'San Siro', 'facil')
+adicionarElementoALista(estadios, 'Emirates Stadium', 'facil')
+adicionarElementoALista(estadios, 'Parc des Princes', 'facil')
+adicionarElementoALista(estadios, 'Wembley Stadium', 'facil')
+adicionarElementoALista(estadios, 'Estádio do Dragão', 'medio')
+adicionarElementoALista(estadios, 'Estádio da Luz', 'medio')
+adicionarElementoALista(estadios, 'Signal Iduna Park', 'medio')
+adicionarElementoALista(estadios, 'Estádio Olímpico de Roma', 'medio')
+adicionarElementoALista(estadios, 'Estádio Monumental de Núñez', 'medio')
+adicionarElementoALista(estadios, 'Estádio do Morumbi', 'medio')
+adicionarElementoALista(estadios, 'Estádio Mineirão', 'medio')
+adicionarElementoALista(estadios, 'Estádio Centenário', 'medio')
+adicionarElementoALista(estadios, 'Estádio Vicente Calderón', 'medio')
+adicionarElementoALista(estadios, 'Stamford Bridge', 'medio')
+adicionarElementoALista(estadios, 'Estádio da Luzhniki', 'dificil')
+adicionarElementoALista(estadios, 'Estádio Mestalla', 'dificil')
+adicionarElementoALista(estadios, 'Estádio da Baixada', 'dificil')
+adicionarElementoALista(estadios, 'Estádio La Bombonera', 'dificil')
+adicionarElementoALista(estadios, 'Estádio do Pacaembu', 'dificil')
+adicionarElementoALista(estadios, 'Estádio de Alvalade', 'dificil')
+adicionarElementoALista(estadios, 'Estádio do Maracanãzinho', 'dificil')
+adicionarElementoALista(estadios, 'Estádio da Ressacada', 'dificil')
+adicionarElementoALista(estadios, 'Estádio Beira Rio', 'dificil')
+adicionarElementoALista(estadios, 'Estádio dos Aflitos', 'dificil')

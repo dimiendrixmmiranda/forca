@@ -4,6 +4,7 @@ import { gerarJogo } from "./gerarJogo.js"
 
 const game = document.querySelector('.game')
 const gameForm = document.querySelector('#gameForm')
+
 gameForm.addEventListener('submit', (e) => {
     e.preventDefault()
     const listaDeCategorias = e.target.querySelectorAll('.game-form-category input')

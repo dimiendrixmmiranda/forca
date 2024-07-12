@@ -2,7 +2,7 @@ import { vereficarSeOJogoAcabou } from "./verificarSeOJogoAcabou.js"
 
 let contadorDeErros = 0
 
-export function inserirLetraNoContainer(palavraSorteada, arrayElementoLetrasPalavraSorteada, imagemDaForca, listaBtnsTeclado) {
+export function inserirLetraNoContainer(palavraSorteada, arrayElementoLetrasPalavraSorteada, imagemDaForca, listaBtnsTeclado, dadosSelecionados) {
     const arrayTecladoBtns = document.querySelectorAll('.game-teclado-btn')
     arrayTecladoBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
@@ -21,13 +21,13 @@ export function inserirLetraNoContainer(palavraSorteada, arrayElementoLetrasPala
                 arrayDeIndices.forEach(indice => {
                     arrayElementoLetrasPalavraSorteada[indice].innerHTML = letraSelecionada
                 })
-                vereficarSeOJogoAcabou(contadorDeErros, palavraSorteada)
+                vereficarSeOJogoAcabou(contadorDeErros, palavraSorteada, dadosSelecionados)
             } else {
                 if (contadorDeErros < 6) {
                     contadorDeErros++
                     console.log(imagemDaForca)
                     imagemDaForca.setAttribute('src', `../assets/imgs/forca-${contadorDeErros}.png`)
-                    vereficarSeOJogoAcabou(contadorDeErros, palavraSorteada)
+                    vereficarSeOJogoAcabou(contadorDeErros, palavraSorteada, dadosSelecionados)
                 }
             }
         })
@@ -52,16 +52,15 @@ export function inserirLetraNoContainer(palavraSorteada, arrayElementoLetrasPala
                     arrayDeIndices.forEach(indice => {
                         arrayElementoLetrasPalavraSorteada[indice].innerHTML = letraSelecionada
                     })
-                    vereficarSeOJogoAcabou(contadorDeErros, palavraSorteada)
+                    vereficarSeOJogoAcabou(contadorDeErros, palavraSorteada, dadosSelecionados)
                 } else {
                     if (contadorDeErros < 6) {
                         contadorDeErros++
                         imagemDaForca.setAttribute('src', `../assets/imgs/forca-${contadorDeErros}.png`)
-                        vereficarSeOJogoAcabou(contadorDeErros, palavraSorteada)
+                        vereficarSeOJogoAcabou(contadorDeErros, palavraSorteada, dadosSelecionados)
                     }
                 }
             }
         })
     })
-    // aqui vai ter que ser uma função para ser compartilhada com o evento keydown
 }

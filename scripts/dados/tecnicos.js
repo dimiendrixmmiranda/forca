@@ -1,43 +1,34 @@
+import { adicionarElementoALista } from "./adicionarElementoALista.js"
+
 export const tecnicos = []
 
-adicionarTecnico('Pep Guardiola', 'facil', false)
-adicionarTecnico('Jürgen Klopp', 'facil', false)
-adicionarTecnico('Zinedine Zidane', 'facil', false)
-adicionarTecnico('José Mourinho', 'facil', false)
-adicionarTecnico('Carlo Ancelotti', 'facil', false)
-adicionarTecnico('Diego Simeone', 'facil', false)
-adicionarTecnico('Antonio Conte', 'facil', false)
-adicionarTecnico('Luis Enrique', 'facil', false)
-adicionarTecnico('Tite', 'facil', false)
-adicionarTecnico('Mauricio Pochettino', 'facil', false)
-adicionarTecnico('Brendan Rodgers', 'medio', false)
-adicionarTecnico('Marcelo Bielsa', 'medio', false)
-adicionarTecnico('Julian Nagelsmann', 'medio', false)
-adicionarTecnico('Thomas Tuchel', 'medio', false)
-adicionarTecnico('Ernesto Valverde', 'medio', false)
-adicionarTecnico('Gareth Southgate', 'medio', false)
-adicionarTecnico('Fernando Santos', 'medio', false)
-adicionarTecnico('Roberto Martinez', 'medio', false)
-adicionarTecnico('Didier Deschamps', 'medio', false)
-adicionarTecnico('Simone Inzaghi', 'medio', false)
-adicionarTecnico('Lucien Favre', 'dificil', false)
-adicionarTecnico('Unai Emery', 'dificil', false)
-adicionarTecnico('Gian Piero Gasperini', 'dificil', false)
-adicionarTecnico('Paulo Fonseca', 'dificil', false)
-adicionarTecnico('Manuel Pellegrini', 'dificil', false)
-adicionarTecnico('Ralf Rangnick', 'dificil', false)
-adicionarTecnico('Julen Lopetegui', 'dificil', false)
-adicionarTecnico('Jesse Marsch', 'dificil', false)
-adicionarTecnico('Marcelo Gallardo', 'dificil', false)
-adicionarTecnico('Nuno Espirito Santo', 'dificil', false)
-
-
-function adicionarTecnico(nome, dificuldade, jaFoiAcertado = false){
-    const objeto = {
-        nome: nome,
-        dificuldade: dificuldade,
-        jaFoiAcertado: jaFoiAcertado
-    }
-    tecnicos.push(objeto)
-}
-
+adicionarElementoALista(tecnicos, 'Pep Guardiola', 'facil')
+adicionarElementoALista(tecnicos, 'Jürgen Klopp', 'facil')
+adicionarElementoALista(tecnicos, 'José Mourinho', 'facil')
+adicionarElementoALista(tecnicos, 'Zinedine Zidane', 'facil')
+adicionarElementoALista(tecnicos, 'Carlo Ancelotti', 'facil')
+adicionarElementoALista(tecnicos, 'Diego Simeone', 'facil')
+adicionarElementoALista(tecnicos, 'Tite', 'facil')
+adicionarElementoALista(tecnicos, 'Luis Enrique', 'facil')
+adicionarElementoALista(tecnicos, 'Didier Deschamps', 'facil')
+adicionarElementoALista(tecnicos, 'Mauricio Pochettino', 'facil')
+adicionarElementoALista(tecnicos, 'Roberto Mancini', 'medio')
+adicionarElementoALista(tecnicos, 'Antonio Conte', 'medio')
+adicionarElementoALista(tecnicos, 'Brendan Rodgers', 'medio')
+adicionarElementoALista(tecnicos, 'Ernesto Valverde', 'medio')
+adicionarElementoALista(tecnicos, 'Julian Nagelsmann', 'medio')
+adicionarElementoALista(tecnicos, 'Marcelo Bielsa', 'medio')
+adicionarElementoALista(tecnicos, 'Gareth Southgate', 'medio')
+adicionarElementoALista(tecnicos, 'Fernando Santos', 'medio')
+adicionarElementoALista(tecnicos, 'Thomas Tuchel', 'medio')
+adicionarElementoALista(tecnicos, 'Jorge Jesus', 'medio')
+adicionarElementoALista(tecnicos, 'Gian Piero Gasperini', 'dificil')
+adicionarElementoALista(tecnicos, 'Unai Emery', 'dificil')
+adicionarElementoALista(tecnicos, 'Julen Lopetegui', 'dificil')
+adicionarElementoALista(tecnicos, 'Marco Rose', 'dificil')
+adicionarElementoALista(tecnicos, 'Nuno Espírito Santo', 'dificil')
+adicionarElementoALista(tecnicos, 'Lucien Favre', 'dificil')
+adicionarElementoALista(tecnicos, 'Ralph Hasenhüttl', 'dificil')
+adicionarElementoALista(tecnicos, 'Paulo Fonseca', 'dificil')
+adicionarElementoALista(tecnicos, 'Hansi Flick', 'dificil')
+adicionarElementoALista(tecnicos, 'Jesse Marsch', 'dificil')

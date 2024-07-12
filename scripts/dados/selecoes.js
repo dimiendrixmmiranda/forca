@@ -1,43 +1,34 @@
+import { adicionarElementoALista } from "./adicionarElementoALista.js"
+
 export const selecoes = []
 
-
-adicionarSelecao('Brasil', 'facil', false)
-adicionarSelecao('Alemanha', 'facil', false)
-adicionarSelecao('Argentina', 'facil', false)
-adicionarSelecao('França', 'facil', false)
-adicionarSelecao('Italia', 'facil', false)
-adicionarSelecao('Espanha', 'facil', false)
-adicionarSelecao('Inglaterra', 'facil', false)
-adicionarSelecao('Portugal', 'facil', false)
-adicionarSelecao('Holanda', 'facil', false)
-adicionarSelecao('Uruguai', 'facil', false)
-adicionarSelecao('Croacia', 'medio', false)
-adicionarSelecao('Belgica', 'medio', false)
-adicionarSelecao('Colombia', 'medio', false)
-adicionarSelecao('Chile', 'medio', false)
-adicionarSelecao('Mexico', 'medio', false)
-adicionarSelecao('Suiça', 'medio', false)
-adicionarSelecao('Suecia', 'medio', false)
-adicionarSelecao('Dinamarca', 'medio', false)
-adicionarSelecao('Nigeria', 'medio', false)
-adicionarSelecao('Japao', 'medio', false)
-adicionarSelecao('Islandia', 'dificil', false)
-adicionarSelecao('Marrocos', 'dificil', false)
-adicionarSelecao('Senegal', 'dificil', false)
-adicionarSelecao('Peru', 'dificil', false)
-adicionarSelecao('Ira', 'dificil', false)
-adicionarSelecao('Coreia do Sul', false, 'dificil')
-adicionarSelecao('Costa Rica', 'difici, falsel')
-adicionarSelecao('Gana', 'dificil', false)
-adicionarSelecao('Camaroes', 'dificil', false)
-adicionarSelecao('Australia', 'dificil', false)
-
-function adicionarSelecao(nome, dificuldade, jaFoiAcertado = false){
-    const objeto = {
-        nome: nome,
-        dificuldade: dificuldade,
-        jaFoiAcertado: jaFoiAcertado
-    }
-    selecoes.push(objeto)
-}
-
+adicionarElementoALista(selecoes, 'Brasil', 'facil')
+adicionarElementoALista(selecoes, 'Alemanha', 'facil')
+adicionarElementoALista(selecoes, 'Argentina', 'facil')
+adicionarElementoALista(selecoes, 'França', 'facil')
+adicionarElementoALista(selecoes, 'Itália', 'facil')
+adicionarElementoALista(selecoes, 'Espanha', 'facil')
+adicionarElementoALista(selecoes, 'Inglaterra', 'facil')
+adicionarElementoALista(selecoes, 'Portugal', 'facil')
+adicionarElementoALista(selecoes, 'Holanda', 'facil')
+adicionarElementoALista(selecoes, 'Uruguai', 'facil')
+adicionarElementoALista(selecoes, 'Croácia', 'medio')
+adicionarElementoALista(selecoes, 'Bélgica', 'medio')
+adicionarElementoALista(selecoes, 'Colômbia', 'medio')
+adicionarElementoALista(selecoes, 'Chile', 'medio')
+adicionarElementoALista(selecoes, 'México', 'medio')
+adicionarElementoALista(selecoes, 'Suíça', 'medio')
+adicionarElementoALista(selecoes, 'Suécia', 'medio')
+adicionarElementoALista(selecoes, 'Dinamarca', 'medio')
+adicionarElementoALista(selecoes, 'Nigéria', 'medio')
+adicionarElementoALista(selecoes, 'Japão', 'medio')
+adicionarElementoALista(selecoes, 'Islândia', 'dificil')
+adicionarElementoALista(selecoes, 'Marrocos', 'dificil')
+adicionarElementoALista(selecoes, 'Senegal', 'dificil')
+adicionarElementoALista(selecoes, 'Peru', 'dificil')
+adicionarElementoALista(selecoes, 'Irã', 'dificil')
+adicionarElementoALista(selecoes, 'Coreia do Sul', 'dificil')
+adicionarElementoALista(selecoes, 'Costa Rica', 'dificil')
+adicionarElementoALista(selecoes, 'Gana', 'dificil')
+adicionarElementoALista(selecoes, 'Camarões', 'dificil')
+adicionarElementoALista(selecoes, 'Austrália', 'dificil')
