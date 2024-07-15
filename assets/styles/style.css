@@ -11,6 +11,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -20,13 +21,21 @@
 body {
   background-color: #FFBF00;
   font-family: "Ubuntu", sans-serif;
+  min-height: 100vh;
+}
+
+button {
+  cursor: pointer;
 }
 
 .header {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 20%;
-  padding: 0.5em;
+  background-color: #f06e1d;
+  margin-bottom: 1em;
+  box-shadow: 0 0 5px 3px #000;
+  padding: 0.4em 0.2em;
 }
 .header a {
   text-decoration: none;
@@ -36,7 +45,7 @@ body {
   align-items: center;
 }
 .header a img {
-  width: 90%;
+  width: 80%;
   align-self: center;
   justify-self: center;
   max-width: 250px;
@@ -54,6 +63,7 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
+  min-height: 82vh;
 }
 
 .game-aviso {
@@ -61,7 +71,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #03580c;
+  background-color: #f06e1d;
   box-shadow: 0 0 4px 2px #000;
   padding: 0.5em;
   font-size: 1.2em;
@@ -110,13 +120,14 @@ body {
   height: 100%;
   background-color: #F3FF90;
   border-radius: 4px;
+  font-weight: bold;
 }
 
 .game-balao-categoria {
   position: absolute;
   top: 0;
-  right: 3%;
-  width: 70px;
+  left: 1.5%;
+  width: 80px;
   background-color: #f06e1d;
   color: #fff;
   text-align: center;
@@ -133,6 +144,29 @@ body {
   text-transform: uppercase;
 }
 
+.game-balao-dica {
+  position: absolute;
+  top: 0%;
+  right: 1.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.game-balao-dica p {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #fff;
+  text-shadow: 1px 1px 2px #000;
+}
+.game-balao-dica button {
+  font-size: 1.6em;
+  background: transparent;
+  border: none;
+  color: #fff;
+  text-shadow: 1px 1px 2px #000;
+}
+
 .game-form {
   max-width: 95%;
   height: -moz-fit-content;
@@ -142,7 +176,6 @@ body {
   background-color: #FFB200;
   color: #fff;
   padding: 1em;
-  border-radius: 6px;
   box-shadow: 0px 0px 3px 1px #000;
   margin: 1.5em auto 1em auto;
 }
@@ -277,7 +310,7 @@ body {
   flex-wrap: wrap;
   gap: 0.4em;
   margin: 1em auto 1em auto;
-  max-width: 95%;
+  max-width: 70%;
 }
 .game-letras .game-letras-container-branco {
   width: 20px;
@@ -325,6 +358,7 @@ body {
   gap: 0.2em;
   background-color: #FFBF00;
   padding: 0.8em;
+  max-width: 500px;
 }
 .game-teclado .game-teclado-btn {
   width: 100%;
@@ -376,17 +410,78 @@ body {
   align-self: center;
   justify-self: center;
   margin-top: 0.7em;
+  font-weight: bold;
 }
 
 .footer {
   padding: 0.5em;
   background-color: #fc5304;
   margin-top: 1em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
 }
 .footer p {
-  font-weight: bold;
+  font-weight: 300;
 }
 .footer p strong {
-  color: #fff;
+  font-weight: bold;
   text-shadow: 1px 1px 2px #000;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 0;
+    margin-bottom: 2em;
+  }
+  .header .header-bars {
+    display: none;
+  }
+  .game-forca .game-forca-imagem img {
+    width: 300px;
+  }
+  .game-letras {
+    gap: 0.6em;
+  }
+  .game-letras .game-letras-container {
+    width: 45px;
+    height: 45px;
+  }
+  .game-teclado .game-teclado-btn {
+    height: 50px;
+    font-size: 1.4em;
+  }
+  .game-vencedor {
+    max-width: 400px;
+  }
+  .game-vencedor button {
+    font-size: 1.1em;
+    white-space: nowrap;
+    width: 95%;
+  }
+  .game-perdedor {
+    max-width: 400px;
+  }
+  .game-perdedor .game-perdedor-btn {
+    font-size: 1.1em;
+    white-space: nowrap;
+    width: 95%;
+  }
+  .game-balao-categoria {
+    width: 140px;
+    font-size: 1.1em;
+    left: auto;
+    right: 5%;
+  }
+  .game-balao-dica {
+    right: 7.5%;
+    top: 17%;
+    font-size: 1.4em;
+  }
+  .footer {
+    font-size: 1.3em;
+  }
 }/*# sourceMappingURL=style.css.map */

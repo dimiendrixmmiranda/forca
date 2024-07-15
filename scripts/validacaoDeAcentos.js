@@ -20,6 +20,9 @@ export function substituirAcentoDaPalavra(palavra) {
     } else if (palavra.includes("õ")) {
         const novaPalavra = palavra.replace('õ', 'o')
         return novaPalavra
+    } else if (palavra.includes("ê")) {
+        const novaPalavra = palavra.replace('ê', 'e')
+        return novaPalavra
     } else {
         return palavra
     }

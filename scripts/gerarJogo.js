@@ -17,6 +17,8 @@ export function gerarJogo(dadosSelecionados){
     elementoGame.appendChild(elementoTeclado)
     const balaoCategoria = gerarBalaoCategoria(dadosSelecionados)
     elementoGame.appendChild(balaoCategoria)
+    const balaoDica = gerarBalaoDica(dadosSelecionados)
+    elementoGame.appendChild(balaoDica)
     const arrayElementoLetrasPalavraSorteada = elementoGameLetras.querySelectorAll('.letra')
     const imagemForca = elementoForcaImagem.querySelector('img')
     const listaBtnsTeclado = elementoTeclado.querySelectorAll('.game-teclado-btn')
@@ -33,4 +35,13 @@ function selecionarPalavra(dadosSelecionados){
 function gerarBalaoCategoria(dadosSelecionados){
     const containerBalaoCategoria = gerarElemento('div', 'game-balao-categoria', '', `Categoria: <strong>${dadosSelecionados.categoriaSelecionada.split('-').join(' ')}</strong>`)
     return containerBalaoCategoria
+}
+function gerarBalaoDica(dadosSelecionados){
+    const div = gerarElemento('div', 'game-balao-dica')
+    const p = gerarElemento('p', 'game-balao-dica-p', '', 'Dica!')
+    const button = gerarElemento('button', 'game-balao-dica-btn', '', `<i class="fa-solid fa-lightbulb"></i>`)
+    div.appendChild(button)
+    div.appendChild(p)
+
+    return div
 }
