@@ -12,6 +12,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@font-face {
+  font-family: "fonteTitulo";
+  src: url("../fonts/SuperSquadItalic.ttf");
+}
 * {
   margin: 0;
   padding: 0;
@@ -28,6 +32,10 @@ button {
   cursor: pointer;
 }
 
+@font-face {
+  font-family: "fonteTitulo";
+  src: url("../fonts/SuperSquadItalic.ttf");
+}
 .header {
   width: 100%;
   display: grid;
@@ -35,7 +43,7 @@ button {
   background-color: #f06e1d;
   margin-bottom: 1em;
   box-shadow: 0 0 5px 3px #000;
-  padding: 0.4em 0.2em;
+  padding: 0.5em;
 }
 .header a {
   text-decoration: none;
@@ -43,21 +51,33 @@ button {
   height: 100%;
   display: flex;
   align-items: center;
+  grid-column: 1/2;
+  display: grid;
+  grid-template-columns: 30% 1fr;
 }
 .header a img {
-  width: 80%;
-  align-self: center;
-  justify-self: center;
-  max-width: 250px;
+  grid-column: 1/2;
+  width: 100%;
+  max-width: 75px;
+}
+.header a h1 {
+  font-family: "fonteTitulo", sans-serif;
+  letter-spacing: 5px;
+  font-size: 2em;
+  text-shadow: 2px 2px 3px #000;
 }
 .header .header-bars {
-  font-size: 2em;
+  font-size: 2.4em;
   background: none;
   border: none;
   border-radius: 6px;
   color: #fff;
 }
 
+@font-face {
+  font-family: "fonteTitulo";
+  src: url("../fonts/SuperSquadItalic.ttf");
+}
 .game {
   margin: 0 auto;
   display: flex;
@@ -66,6 +86,10 @@ button {
   min-height: 82vh;
 }
 
+@font-face {
+  font-family: "fonteTitulo";
+  src: url("../fonts/SuperSquadItalic.ttf");
+}
 .game-aviso {
   position: absolute;
   top: 50%;
@@ -89,6 +113,10 @@ button {
   font-weight: bold;
 }
 
+@font-face {
+  font-family: "fonteTitulo";
+  src: url("../fonts/SuperSquadItalic.ttf");
+}
 .game-vencedor {
   position: absolute;
   top: 50%;
@@ -123,6 +151,10 @@ button {
   font-weight: bold;
 }
 
+@font-face {
+  font-family: "fonteTitulo";
+  src: url("../fonts/SuperSquadItalic.ttf");
+}
 .game-balao-categoria {
   position: absolute;
   top: 0;
@@ -144,6 +176,10 @@ button {
   text-transform: uppercase;
 }
 
+@font-face {
+  font-family: "fonteTitulo";
+  src: url("../fonts/SuperSquadItalic.ttf");
+}
 .game-balao-dica {
   position: absolute;
   top: 0%;
@@ -167,6 +203,10 @@ button {
   text-shadow: 1px 1px 2px #000;
 }
 
+@font-face {
+  font-family: "fonteTitulo";
+  src: url("../fonts/SuperSquadItalic.ttf");
+}
 .game-form {
   max-width: 95%;
   height: -moz-fit-content;
@@ -296,6 +336,10 @@ button {
   text-shadow: 1px 1px 2px #000;
 }
 
+@font-face {
+  font-family: "fonteTitulo";
+  src: url("../fonts/SuperSquadItalic.ttf");
+}
 .game-forca {
   width: 95%;
   margin: 0 auto;
@@ -304,6 +348,10 @@ button {
   align-items: center;
 }
 
+@font-face {
+  font-family: "fonteTitulo";
+  src: url("../fonts/SuperSquadItalic.ttf");
+}
 .game-letras {
   display: flex;
   justify-content: center;
@@ -350,6 +398,10 @@ button {
   background-color: #000;
 }
 
+@font-face {
+  font-family: "fonteTitulo";
+  src: url("../fonts/SuperSquadItalic.ttf");
+}
 .game-teclado {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -371,6 +423,10 @@ button {
   opacity: 0.5;
 }
 
+@font-face {
+  font-family: "fonteTitulo";
+  src: url("../fonts/SuperSquadItalic.ttf");
+}
 .game-perdedor {
   position: absolute;
   top: 50%;
@@ -413,6 +469,10 @@ button {
   font-weight: bold;
 }
 
+@font-face {
+  font-family: "fonteTitulo";
+  src: url("../fonts/SuperSquadItalic.ttf");
+}
 .footer {
   padding: 0.5em;
   background-color: #fc5304;

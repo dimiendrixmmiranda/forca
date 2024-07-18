@@ -1,5 +1,4 @@
 import { gerarElemento } from "./criacao/gerarElemento.js"
-import { informacoes } from "./dados/informacoes.js"
 import { gerarJogo } from "./gerarJogo.js"
 
 const game = document.querySelector('.game')

@@ -3,6 +3,7 @@ import { gerarForcaImagem } from "./criacao/gerarForcaImagem.js"
 import { gerarLetras } from "./criacao/gerarForcaLetras.js"
 import { gerarTeclado } from "./criacao/gerarTeclado.js"
 import { informacoes } from "./dados/informacoes.js"
+import { escreverInformacoesNoLocalStorage } from "./escreverInformacoesNoLocalStorage.js"
 import { inserirLetraNoContainer } from "./inserirLetraNoContainer.js"
 const elementoGame = document.querySelector('.game')
 const arrayDeInformacoes = informacoes
@@ -28,8 +29,18 @@ export function gerarJogo(dadosSelecionados){
 function selecionarPalavra(dadosSelecionados){
     const categoriaSelecionada = arrayDeInformacoes.filter(elemento => elemento.categoria == dadosSelecionados.categoriaSelecionada)[0]
     const selecionarPalavrasPeloNivel = categoriaSelecionada.arrayDeInformacoes.filter(possivelPalavra => possivelPalavra.dificuldade == dadosSelecionados.dificuldadeSelecionada)
-    const indiceDaPalavraSelecionada = Math.floor(Math.random() * selecionarPalavrasPeloNivel.length) 
-    return selecionarPalavrasPeloNivel[indiceDaPalavraSelecionada]
+    const selecionarPalavraJaFoiAcertada = selecionarPalavrasPeloNivel.filter(el => el.jaFoiAcertado == false)
+
+    if(selecionarPalavraJaFoiAcertada.length <=0){
+        // POSSÍVEL TRATAMENTO: POSSO IMPLEMENTAR QUE O USUÁRIO JA ACERTOU TODAS AS PALAVRAS DISPONÍVEIS
+        categoriaSelecionada.arrayDeInformacoes.forEach(el => el.jaFoiAcertado = false)
+        escreverInformacoesNoLocalStorage()
+        return selecionarPalavrasPeloNivel[0]
+    }else{
+        const indiceDaPalavraSelecionada = Math.floor(Math.random() * selecionarPalavraJaFoiAcertada.length) 
+        escreverInformacoesNoLocalStorage()
+        return selecionarPalavraJaFoiAcertada[indiceDaPalavraSelecionada]
+    }
 }
 
 function gerarBalaoCategoria(dadosSelecionados){
